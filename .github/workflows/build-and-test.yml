@@ -38,7 +38,7 @@ jobs:
         run: dotnet build test/Soenneker.Spotify.Runners.OpenApiClient.Tests/Soenneker.Spotify.Runners.OpenApiClient.Tests.csproj --configuration Release --no-restore --verbosity minimal
 
       - name: Test
-        run: dotnet test test/Soenneker.Spotify.Runners.OpenApiClient.Tests/Soenneker.Spotify.Runners.OpenApiClient.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
+        run: dotnet test --project test/Soenneker.Spotify.Runners.OpenApiClient.Tests/Soenneker.Spotify.Runners.OpenApiClient.Tests.csproj --configuration Release --no-build --no-restore --verbosity minimal
 
       - name: Pack
         run: dotnet pack src/Soenneker.Spotify.Runners.OpenApiClient/Soenneker.Spotify.Runners.OpenApiClient.csproj --configuration Release --no-build --no-restore --output . --verbosity minimal
